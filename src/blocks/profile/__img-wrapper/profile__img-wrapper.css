@@ -1,0 +1,7 @@
+.profile__img-wrapper {
+  position: relative;
+}
+
+.profile__img-wrapper:hover .profile__img-hover {
+  display: block;
+}
