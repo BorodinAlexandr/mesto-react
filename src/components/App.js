@@ -30,21 +30,13 @@ function App() {
   }
 
   function closeAllPopups() {
-    isEditProfilePopupOpen
-      ? setIsEditProfilePopupOpen(!isEditProfilePopupOpen)
-      : setIsEditProfilePopupOpen(isEditProfilePopupOpen);
+    setIsEditProfilePopupOpen(false);
 
-    isAddPlacePopupOpen
-      ? setIsAddPlacePopupOpen(!isAddPlacePopupOpen)
-      : setIsAddPlacePopupOpen(isAddPlacePopupOpen);
+    setIsAddPlacePopupOpen(false);
 
-    isEditAvatarPopupOpen
-      ? setIsEditAvatarPopupOpen(!isEditAvatarPopupOpen)
-      : setIsEditAvatarPopupOpen(isEditAvatarPopupOpen);
+    setIsEditAvatarPopupOpen(false);
 
-    isImgPopupOpen
-      ? setIsImgPopupOpen(!isImgPopupOpen)
-      : setIsImgPopupOpen(isImgPopupOpen);
+    setIsImgPopupOpen(false);
   }
 
   return (

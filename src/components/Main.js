@@ -11,22 +11,29 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    api.getInitialCards().then((res) => {
+    api
+      .getInitialCards()
+      .then((res) => {
         setCards(res);
+      })
+      .catch((err) => {
+        console.log(err);
       });
-  }, [])
+  }, []);
 
-  api.getUserInfo().then((res) => {
-    setUserName(`${res.name}`);
-    setUserDescription(`${res.about}`);
-    setUserAvatar(`${res.avatar}`);
-  });
+  useEffect(() => {
+    api
+      .getUserInfo()
+      .then((res) => {
+        setUserName(`${res.name}`);
+        setUserDescription(`${res.about}`);
+        setUserAvatar(`${res.avatar}`);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-//   api.getInitialCards().then((res) => {
-//     console.log(res)
-//     setCards(res);
-
-//   });
 
   return (
     <main className="main">
@@ -58,9 +65,8 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
       </section>
 
       <section className="places">
-      {
-      cards.map((card, i) => {
-        return <Card card={card} onCardClick={onCardClick} key={i}/>
+        {cards.map((card) => {
+          return <Card card={card} onCardClick={onCardClick} key={card._id} />;
         })}
       </section>
     </main>
