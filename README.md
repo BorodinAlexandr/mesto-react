@@ -3,7 +3,7 @@
 ## mesto-react покажет вам то, что вы ещё не видели с использованием React. А ещё тут скоро будет можно ставить лайки (и убирать их, но кто нынче убирает лайки?)
 
 ### Стек технологий:
-####  REACT   CSS    JS(ECMAScript 6 + fetch API + Ajax)    Webpack 
+####  React   REACT Hooks   CSS    JS(ECMAScript 6 + fetch API + Ajax)    Webpack 
 
 #### Cайт умеет:
   ##### :black_circle: Открывать и закрывать попапы
